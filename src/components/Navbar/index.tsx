@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({
   mode,
   onChangeMode: onChangeMode
 }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -112,43 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({
             ? 'ic:round-light-mode'
             : 'ic:round-contrast'
       }
-    />,
-    <Icon
-      key="discord"
-      onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
-      style={{ cursor: 'pointer' }}
-      fontSize={30}
-      icon={'ic:baseline-discord'}
-    />,
-    <iframe
-      key="github-star"
-      src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
-      frameBorder="0"
-      scrolling="0"
-      width="150"
-      height="30"
-      title="GitHub"
-    ></iframe>,
-    <Button
-      key="translate"
-      onClick={() => {
-        window.open(
-          'https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK',
-          '_blank'
-        );
-      }}
-      sx={{ borderRadius: '100px' }}
-      variant={'contained'}
-      startIcon={
-        <Icon
-          style={{ cursor: 'pointer' }}
-          fontSize={25}
-          icon={'ix:language-filled'}
-        />
-      }
-    >
-      {t('navbar.helpTranslate')}
-    </Button>
+    />
   ];
   const drawerList = (
     <List>
